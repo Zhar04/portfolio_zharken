@@ -210,3 +210,22 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 75,
+});
+
+typewriter
+  .pauseFor(1000)
+  .typeString('Software Engineer')
+  .pauseFor(1000)
+  .deleteChars(17)
+  .typeString('Freelancer')
+  .pauseFor(1000)
+  .deleteChars(10)
+  .typeString('Full-stack developer')
+  .pauseFor(1000)
+  .start();
